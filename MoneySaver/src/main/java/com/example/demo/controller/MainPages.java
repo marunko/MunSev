@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainPages {
 
 	// Main page
-	@GetMapping()
+	@GetMapping("/")
 	public String index(Model model) {
-		
-		return "index";
+		model.addAttribute("title", "Proj name");
+		return "/main/index";
 	}
 	
 	// About 
